@@ -5,6 +5,7 @@
 #include "ModuleTextures.h"
 #include "ModuleInput.h"
 #include "ModuleScene.h"
+#include "ModulePolygon.h"
 
 using namespace std;
 
@@ -16,6 +17,7 @@ Application::Application()
 	modules.push_back(textures = new ModuleTextures());
 	modules.push_back(input = new ModuleInput());
 	modules.push_back(scene = new ModuleScene());
+	modules.push_back(polygon = new ModulePolygon());
 
 	// TODO 7: Create a new "scene" module that loads a texture and draws it on the screen
 
@@ -30,6 +32,7 @@ Application::~Application()
 	delete textures;
 	delete renderer;
 	delete window;
+	delete polygon;
 
 	modules.clear();
 }
