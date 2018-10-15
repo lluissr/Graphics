@@ -44,3 +44,9 @@ update_status ModulePolygon::Update()
 
 	return UPDATE_CONTINUE;
 }
+
+bool ModulePolygon::CleanUp()
+{
+	glDeleteBuffers(1, &vbo);
+	return true;
+}
